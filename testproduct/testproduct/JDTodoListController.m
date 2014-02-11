@@ -39,12 +39,35 @@ NSArray *_todoItems;
     }
     JDTodoItem *todoItem = _todoItems[indexPath.row];
     cell.textLabel.text = [todoItem title];
+    
+    if(todoItem.completed){
+        //show checkmark
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    else{
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        //show nothing
+    }
+
     return cell;
     
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Test Path - %@", indexPath);
+    JDTodoItem *todoItem = _todoItems[indexPath. row];
+    
+    if(todoItem.completed){
+        todoItem.completed = NO;
+    }
+    else if(![todoItem completed]){
+        todoItem.completed = YES;
+        
+    }
+    else{
+        NSLog(@"Error Occurred.");
+    }
+    NSLog(@"Row: %d - Completed: %d", indexPath.row, todoItem.completed);
+    [tableView reloadData];
 }
 - (void) loadView
 {
