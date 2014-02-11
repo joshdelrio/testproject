@@ -21,6 +21,8 @@
 		AC9346A118AA680C009E1E2E /* testproductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9346A018AA680C009E1E2E /* testproductTests.m */; };
 		AC9346AF18AA6BA5009E1E2E /* JDTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9346AE18AA6BA5009E1E2E /* JDTodoItem.m */; };
 		AC9346B318AA725B009E1E2E /* JDTodoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9346B218AA725B009E1E2E /* JDTodoListController.m */; };
+		AC9346B618AA9F9F009E1E2E /* JDAddNewTodoController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9346B518AA9F9F009E1E2E /* JDAddNewTodoController.m */; };
+		AC9346BA18AAA006009E1E2E /* JDAddNewTodoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9346B918AAA006009E1E2E /* JDAddNewTodoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		AC9346AE18AA6BA5009E1E2E /* JDTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDTodoItem.m; sourceTree = "<group>"; };
 		AC9346B118AA725B009E1E2E /* JDTodoListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDTodoListController.h; sourceTree = "<group>"; };
 		AC9346B218AA725B009E1E2E /* JDTodoListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDTodoListController.m; sourceTree = "<group>"; };
+		AC9346B418AA9F9F009E1E2E /* JDAddNewTodoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDAddNewTodoController.h; sourceTree = "<group>"; };
+		AC9346B518AA9F9F009E1E2E /* JDAddNewTodoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddNewTodoController.m; sourceTree = "<group>"; };
+		AC9346B818AAA006009E1E2E /* JDAddNewTodoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDAddNewTodoView.h; sourceTree = "<group>"; };
+		AC9346B918AAA006009E1E2E /* JDAddNewTodoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDAddNewTodoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 		AC93468118AA680C009E1E2E /* testproduct */ = {
 			isa = PBXGroup;
 			children = (
+				AC9346B718AA9FF3009E1E2E /* View */,
 				AC9346B018AA7242009E1E2E /* Controller */,
 				AC9346AC18AA6B81009E1E2E /* Model */,
 				AC93468A18AA680C009E1E2E /* JDAppDelegate.h */,
@@ -166,8 +173,19 @@
 			children = (
 				AC9346B118AA725B009E1E2E /* JDTodoListController.h */,
 				AC9346B218AA725B009E1E2E /* JDTodoListController.m */,
+				AC9346B418AA9F9F009E1E2E /* JDAddNewTodoController.h */,
+				AC9346B518AA9F9F009E1E2E /* JDAddNewTodoController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		AC9346B718AA9FF3009E1E2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC9346B818AAA006009E1E2E /* JDAddNewTodoView.h */,
+				AC9346B918AAA006009E1E2E /* JDAddNewTodoView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +286,8 @@
 			files = (
 				AC93468C18AA680C009E1E2E /* JDAppDelegate.m in Sources */,
 				AC9346B318AA725B009E1E2E /* JDTodoListController.m in Sources */,
+				AC9346B618AA9F9F009E1E2E /* JDAddNewTodoController.m in Sources */,
+				AC9346BA18AAA006009E1E2E /* JDAddNewTodoView.m in Sources */,
 				AC9346AF18AA6BA5009E1E2E /* JDTodoItem.m in Sources */,
 				AC93468818AA680C009E1E2E /* main.m in Sources */,
 			);

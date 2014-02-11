@@ -8,21 +8,21 @@
 
 #import "JDTodoItem.h"
 #import "JDTodoListController.h"
+#import "JDAddNewTodoController.h"
 
 @implementation JDTodoListController
 {
-NSArray *_todoItems;
+NSMutableArray *_todoItems;
 
 }
 - (id) init
 {
     self = [super init];
     if (self){
-        JDTodoItem *itemOne = [[JDTodoItem alloc] init];
-        itemOne.title = @"Test One";
-        JDTodoItem *itemTwo = [[JDTodoItem alloc] init];
-        itemTwo.title = @"Test Two";
-        _todoItems = @[itemOne, itemTwo];
+        [self setTitle:@"JD Test"];
+        _todoItems = [[NSMutableArray alloc] init];
+        UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPressed:)];
+        [self.navigationItem setRightBarButtonItem:button];
     }
     return self;
 }
@@ -45,8 +45,8 @@ NSArray *_todoItems;
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
     else{
-        cell.accessoryType = UITableViewCellAccessoryNone;
         //show nothing
+        cell.accessoryType = UITableViewCellAccessoryNone;
     }
 
     return cell;
@@ -70,6 +70,11 @@ NSArray *_todoItems;
     self.view = tableView;
 
 }
-
+- (void) addPressed:(id)sender
+{
+    JDAddNewTodoController *controller = [[JDAddNewTodoController alloc] init];
+    [self presentViewController:controller animated:YES completion:nil];
+    
+}
 @end
 

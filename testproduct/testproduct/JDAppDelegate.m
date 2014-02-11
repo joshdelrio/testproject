@@ -15,7 +15,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     JDTodoListController *todoListController = [[JDTodoListController alloc] init];
-    [self.window setRootViewController:(todoListController)];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:todoListController];
+    [self.window setRootViewController:navController];
     [self.window makeKeyAndVisible];
     return YES;
 }
