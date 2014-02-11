@@ -55,19 +55,12 @@ NSArray *_todoItems;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     JDTodoItem *todoItem = _todoItems[indexPath. row];
+    todoItem.completed = !todoItem.completed;
+    //NSLog(@"Row: %d - Completed: %d", indexPath.row, todoItem.completed);
     
-    if(todoItem.completed){
-        todoItem.completed = NO;
-    }
-    else if(![todoItem completed]){
-        todoItem.completed = YES;
-        
-    }
-    else{
-        NSLog(@"Error Occurred.");
-    }
-    NSLog(@"Row: %d - Completed: %d", indexPath.row, todoItem.completed);
-    [tableView reloadData];
+    //This reloads the whole table: [tableView reloadData];
+    //This reloads only the cell updated
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:(UITableViewRowAnimationAutomatic)];
 }
 - (void) loadView
 {
