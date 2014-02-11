@@ -20,6 +20,7 @@
 		AC93469F18AA680C009E1E2E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC93469D18AA680C009E1E2E /* InfoPlist.strings */; };
 		AC9346A118AA680C009E1E2E /* testproductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9346A018AA680C009E1E2E /* testproductTests.m */; };
 		AC9346AF18AA6BA5009E1E2E /* JDTodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9346AE18AA6BA5009E1E2E /* JDTodoItem.m */; };
+		AC9346B318AA725B009E1E2E /* JDTodoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC9346B218AA725B009E1E2E /* JDTodoListController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		AC9346A018AA680C009E1E2E /* testproductTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testproductTests.m; sourceTree = "<group>"; };
 		AC9346AD18AA6BA5009E1E2E /* JDTodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDTodoItem.h; sourceTree = "<group>"; };
 		AC9346AE18AA6BA5009E1E2E /* JDTodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDTodoItem.m; sourceTree = "<group>"; };
+		AC9346B118AA725B009E1E2E /* JDTodoListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDTodoListController.h; sourceTree = "<group>"; };
+		AC9346B218AA725B009E1E2E /* JDTodoListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDTodoListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 		AC93468118AA680C009E1E2E /* testproduct */ = {
 			isa = PBXGroup;
 			children = (
+				AC9346B018AA7242009E1E2E /* Controller */,
 				AC9346AC18AA6B81009E1E2E /* Model */,
 				AC93468A18AA680C009E1E2E /* JDAppDelegate.h */,
 				AC93468B18AA680C009E1E2E /* JDAppDelegate.m */,
@@ -155,6 +159,15 @@
 				AC9346AE18AA6BA5009E1E2E /* JDTodoItem.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		AC9346B018AA7242009E1E2E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC9346B118AA725B009E1E2E /* JDTodoListController.h */,
+				AC9346B218AA725B009E1E2E /* JDTodoListController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC93468C18AA680C009E1E2E /* JDAppDelegate.m in Sources */,
+				AC9346B318AA725B009E1E2E /* JDTodoListController.m in Sources */,
 				AC9346AF18AA6BA5009E1E2E /* JDTodoItem.m in Sources */,
 				AC93468818AA680C009E1E2E /* main.m in Sources */,
 			);
