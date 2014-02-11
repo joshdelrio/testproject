@@ -10,7 +10,10 @@
 #import "JDTodoListController.h"
 
 @implementation JDTodoListController
+{
 NSArray *_todoItems;
+
+}
 - (id) init
 {
     self = [super init];
@@ -31,10 +34,17 @@ NSArray *_todoItems;
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"jd-todo-item-cell"];
     if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"jd-todo-tem-cell"]
+        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:@"jd-todo-item-cell"];
     
     }
+    JDTodoItem *todoItem = _todoItems[indexPath.row];
+    cell.textLabel.text = [todoItem title];
+    return cell;
     
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Test Path - %@", indexPath);
 }
 - (void) loadView
 {
@@ -46,3 +56,4 @@ NSArray *_todoItems;
 }
 
 @end
+
